@@ -16,7 +16,8 @@ Sentry.init({
   // If you don't want to use Session Replay, just remove the line below:
   integrations: [
     replayIntegration(),
-    new Sentry.BrowserTracing({ enableInp: true }),
+    // new Sentry.BrowserTracing({ enableInp: true }),
+    Sentry.browserTracingIntegration({ enableInp: true }),
   ],
 
   debug: true,
